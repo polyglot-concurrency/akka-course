@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = false
+
+[packages]
+#uvicorn = "*"
+#python-multipart = "*"
+fastapi = {extras = ["all"], version = "*"}
+fluent-logger = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+s = 'python run.py'
