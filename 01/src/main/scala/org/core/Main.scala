@@ -24,3 +24,7 @@ object in:
     def addCredit(c: Int): Unit = for wallet <- getWallet() do wallet ! Wallet.Credit(c)
 
     def addDebit(c: Int): Unit = for wallet <- getWallet() do wallet ! Wallet.Debit(c)
+
+    def load: Unit = for wallet <- getWallet() do wallet ! Wallet.Load
+
+    def save: Unit = for wallet <- getWallet() do wallet ! Wallet.Save

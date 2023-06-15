@@ -12,12 +12,15 @@ lazy val root = project
       "com.typesafe.akka" %% "akka-actor-typed"         % AkkaVersion,
       "ch.qos.logback"     % "logback-classic"          % LogbackVersion,
       "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test,
+      "com.lihaoyi"       %% "requests"                 % "0.8.0",
+      "org.json4s"        %% "json4s-native"            % "4.0.6",
     )
   )
 
 ThisBuild / scalacOptions ++=
   Seq(
-    "-explain"
+    "-explain",
+    "-deprecation",
     // "-Yexplicit-nulls",
     // "-Ysafe-init",
     // "-Wunused:all",
